@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生请假申请表</title>
+    <link rel="stylesheet" href="next.css">
+</head>
+<body>
+    <div class="leave-header">
+        <span class="back-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 12 24"><path fill="currentColor" fill-rule="evenodd" d="M10 19.438L8.955 20.5l-7.666-7.79a1.02 1.02 0 0 1 0-1.42L8.955 3.5L10 4.563L2.682 12z"></path></svg></span>
+        <span class="close-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><defs><path id="SVG0kegTdID" fill="currentColor" d="M8 6.943L1.807.75L.75 1.807L6.943 8L.75 14.193l1.057 1.057L8 9.057l6.193 6.193l1.057-1.057L9.057 8l6.193-6.193L14.193.75z"></path></defs><use fill-rule="evenodd" href="#SVG0kegTdID" transform="translate(4 4)"></use></svg></span>
+        <span class="star-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1024 1024" aria-hidden="true"><g transform="translate(0 896) scale(1 -1)"><path fill="currentColor" d="M950 439Q969 462 961.5 484.5Q954 507 925 515L682 570L554 785Q538 811 514 811Q490 811 474 785L346 570L103 515Q73 507 66 484.5Q59 462 78 439L242 251L220 2Q218 -29 237 -42.5Q256 -56 284 -45L522 57Q530 61 533 68.5Q536 76 532.5 84.5Q529 93 521.5 96Q514 99 505 96L268 -6Q263 -9 262 -8Q261 -7 262 -2L286 265L110 467Q106 471 106.5 471.5Q107 472 112 473L373 533L510 763Q513 768 514 768Q515 768 517 763L654 533L916 473Q921 472 921 471.5Q921 471 918 467L741 265L766 -2Q767 -11 773.5 -16.5Q780 -22 789 -21Q798 -20 803.5 -13.5Q809 -7 808 2L785 251Z"></path></g></svg></span>
+        <div class="leave-title">学生请假</div>
+    </div>
+
+    <div class="leave-tabs">
+        <div class="tab-btn tab-left active">登记表</div>
+        <div class="tab-btn tab-right">签批流程</div>
+    </div>
+
+    <div class="leave-form-wrap">
+        <div class="form-title">学生请假申请表</div>
+        
+        <!-- 基本信息 -->
+        <div class="section-title">
+            <span class="edit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1024 1024" aria-hidden="true" style="display:inline-block;vertical-align:middle;">
+                    <g transform="translate(0 896) scale(1 -1)">
+                        <path fill="#555" stroke="#555" stroke-width="36" stroke-linejoin="round" paint-order="stroke fill" d="M863 780Q869 786 877 788.5Q885 791 893.5 788.5Q902 786 908 780Q914 774 916.5 765.5Q919 757 916.5 749Q914 741 908 735L455 282Q446 273 433 273Q420 273 410.5 282.5Q401 292 401 305Q401 318 410 327ZM853 448Q853 461 862.5 470.5Q872 480 885.5 480Q899 480 908 470.5Q917 461 917 448V96Q917 64 901.5 37Q886 10 859 -5.5Q832 -21 800 -21H224Q192 -21 165 -5.5Q138 10 122.5 37Q107 64 107 96V672Q107 704 122.5 731Q138 758 165 773.5Q192 789 224 789H565Q579 789 588 780Q597 771 597 757.5Q597 744 588 734.5Q579 725 565 725H224Q202 725 186.5 709.5Q171 694 171 672V96Q171 74 186.5 58.5Q202 43 224 43H800Q822 43 837.5 58.5Q853 74 853 96Z">
+                        </path>
+                    </g>
+                </svg>
+            </span>
+            <span>基本信息</span>
+        </div>
+        <div class="leave-form-card">
+            <table class="form-table">
+                <tr class="taller-row">
+                    <td class="form-label">院系</td>
+                    <td class="form-content" id="department"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">年级</td>
+                    <td class="form-content" id="grade"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">专业</td>
+                    <td class="form-content" id="major"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">班级</td>
+                    <td class="form-content" id="class"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">姓名</td>
+                    <td class="form-content" id="name"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">学号</td>
+                    <td class="form-content" id="studentId"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">性别</td>
+                    <td class="form-content" id="gender"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">民族</td>
+                    <td class="form-content" id="ethnicity"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">申请日期</td>
+                    <td class="form-content" id="applyDate"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">联系方式</td>
+                    <td class="form-content" id="phone"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 请假信息 -->
+        <div class="section-title">
+            <span class="edit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1024 1024" aria-hidden="true" style="display:inline-block;vertical-align:middle;">
+                    <g transform="translate(0 896) scale(1 -1)">
+                        <path fill="#555" stroke="#555" stroke-width="36" stroke-linejoin="round" paint-order="stroke fill" d="M863 780Q869 786 877 788.5Q885 791 893.5 788.5Q902 786 908 780Q914 774 916.5 765.5Q919 757 916.5 749Q914 741 908 735L455 282Q446 273 433 273Q420 273 410.5 282.5Q401 292 401 305Q401 318 410 327ZM853 448Q853 461 862.5 470.5Q872 480 885.5 480Q899 480 908 470.5Q917 461 917 448V96Q917 64 901.5 37Q886 10 859 -5.5Q832 -21 800 -21H224Q192 -21 165 -5.5Q138 10 122.5 37Q107 64 107 96V672Q107 704 122.5 731Q138 758 165 773.5Q192 789 224 789H565Q579 789 588 780Q597 771 597 757.5Q597 744 588 734.5Q579 725 565 725H224Q202 725 186.5 709.5Q171 694 171 672V96Q171 74 186.5 58.5Q202 43 224 43H800Q822 43 837.5 58.5Q853 74 853 96Z">
+                        </path>
+                    </g>
+                </svg>
+            </span>
+            <span>请假信息</span>
+        </div>
+        <div class="leave-form-card">
+            <table class="form-table">
+                <tr>
+                    <td class="form-label">请假类型</td>
+                    <td class="form-content" id="leaveType"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">是否代请假</td>
+                    <td class="form-content" id="proxyLeave"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">请假开始时间</td>
+                    <td class="form-content" id="startDate"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">请假结束时间</td>
+                    <td class="form-content" id="endDate"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">请假天数</td>
+                    <td class="form-content" id="leaveDays"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">家长是否知晓</td>
+                    <td class="form-content" id="parentKnow"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">家长姓名</td>
+                    <td class="form-content" id="parentName"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">家长联系电话</td>
+                    <td class="form-content" id="parentPhone"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">请假去向类型</td>
+                    <td class="form-content" id="destinationType"></td>
+                </tr>
+                <tr class="taller-row">
+                    <td class="form-label">请假去向（具体地点）</td>
+                    <td class="form-content" id="destination"></td>
+                </tr>
+                <tr>
+                    <td class="form-label">请假事由</td>
+                    <td class="form-content" id="reason"></td>
+                </tr>
+                <tr class="shorter-row">
+                    <td class="form-label">附件</td>
+                    <td class="form-content" id="attachment"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 审批流程 -->
+        <div class="section-title">
+            <span class="edit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1024 1024" aria-hidden="true" style="display:inline-block;vertical-align:middle;">
+                    <g transform="translate(0 896) scale(1 -1)">
+                        <path fill="#555" stroke="#555" stroke-width="36" stroke-linejoin="round" paint-order="stroke fill" d="M863 780Q869 786 877 788.5Q885 791 893.5 788.5Q902 786 908 780Q914 774 916.5 765.5Q919 757 916.5 749Q914 741 908 735L455 282Q446 273 433 273Q420 273 410.5 282.5Q401 292 401 305Q401 318 410 327ZM853 448Q853 461 862.5 470.5Q872 480 885.5 480Q899 480 908 470.5Q917 461 917 448V96Q917 64 901.5 37Q886 10 859 -5.5Q832 -21 800 -21H224Q192 -21 165 -5.5Q138 10 122.5 37Q107 64 107 96V672Q107 704 122.5 731Q138 758 165 773.5Q192 789 224 789H565Q579 789 588 780Q597 771 597 757.5Q597 744 588 734.5Q579 725 565 725H224Q202 725 186.5 709.5Q171 694 171 672V96Q171 74 186.5 58.5Q202 43 224 43H800Q822 43 837.5 58.5Q853 74 853 96Z">
+                        </path>
+                    </g>
+                </svg>
+            </span>
+            <span>审批流程</span>
+        </div>
+        <div class="leave-form-card">
+            <table class="form-table approval-table">
+                <tr class="counselor-row">
+                    <td class="form-label">辅导员意见</td>
+                    <td class="form-content">
+                        <span id="counselorOpinion">拟同意</span>
+                        <div class="counselor-info">
+                            <span id="counselorDepartment"></span>
+                            <span id="counselorNameDisplay"></span>
+                            <span id="counselorDate"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="approval-row">
+                    <td class="form-label">副书记意见</td>
+                    <td class="form-content"></td>
+                </tr>
+                <tr class="approval-row">
+                    <td class="form-label">书记意见</td>
+                    <td class="form-content"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="height: 80px;"></div>
+    </div>
+
+    <div class="fixed-bottom">
+    </div>
+
+    <script src="next.js"></script>
+</body>
+</html>

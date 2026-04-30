@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 101px;
+}
+
+.leave-header {
+    background-color: #204389;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 100;
+}
+
+.leave-header .leave-title {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    right: 30px;
+    left: 30px;
+}
+
+.back-icon {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.close-icon {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.star-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    color: #888888;
+}
+
+.leave-tabs {
+    display: flex;
+    background-color: white;
+    border-top: 5px solid #27437d;
+    border-bottom: 1px solid #e8e8e8;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    color: #333;
+    font-weight: bold;
+}
+
+.tab-left.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 1.8px;
+    background-color: #d92121;
+}
+
+.tab-right.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 1.8px;
+    background-color: #d92121;
+}
+
+.leave-form-wrap {
+    padding: 16px;
+}
+
+.leave-form-card {
+    background-color: white;
+    border: 1px solid #8abff4;
+    border-radius: 0;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    padding: 20px 0 10px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #666;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table tr {
+    border-bottom: 1px solid #8abff4;
+    height: 46px;
+}
+
+.form-table tr:last-child {
+    border-bottom: none;
+}
+
+.form-label {
+    width: 30.08%;
+    min-width: 120px;
+    background-color: #f2f9fd;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    border-right: 1px solid #8abff4;
+    vertical-align: middle;
+    height: 44px;
+}
+
+.form-content {
+    padding: 0 16px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    vertical-align: middle;
+    height: 44px;
+}
+
+.form-label.required::before {
+    content: "*";
+    color: #f72828;
+    margin-right: 6px;
+}
+
+.form-content {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+
+.form-content input[type="text"],
+.form-content input[type="tel"],
+.form-content input[type="number"],
+.form-content select {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: transparent;
+}
+
+.form-content input::placeholder {
+    color: #777777;
+}
+
+.form-content textarea::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.form-content textarea {
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+    height: 28px;
+    outline: none;
+    background: transparent;
+}
+
+.form-content input[type="date"],
+.form-content select {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    background: transparent;
+}
+
+.form-content input[type="date"] {
+    padding-right: 30px;
+}
+
+.form-content input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 16px;
+    left: auto;
+    cursor: pointer;
+}
+
+.form-content select {
+    cursor: pointer;
+    padding-right: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23333' d='M5 6L0 1h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 10px;
+}
+
+.form-content input[type="file"] {
+    font-size: 14px;
+    color: #333;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    accent-color: #2959b9;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-next {
+    background-color: #54a7e7;
+    color: white;
+    border: none;
+    padding: 0 24px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.btn-next:hover {
+    background-color: #3d7fc4;
+}
